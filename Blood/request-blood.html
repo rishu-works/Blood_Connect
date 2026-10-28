@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Emergency Blood Request | BloodConnect</title><link rel="stylesheet" href="css/style.css"><script src="js/app.js" defer></script></head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="drop">🩸</span><span><b>Blood</b>Connect</span></a><button class="menu-toggle" aria-label="Toggle navigation" data-menu-toggle>☰</button><nav class="nav" data-nav><a href="index.html">Home</a><a href="donors.html">Search Donors</a><a class="active" href="request-blood.html">Emergency Request</a><a href="awareness.html">Awareness</a><a href="admin-dashboard.html">Admin Dashboard</a><a class="nav-cta" href="login.html">Login / Register</a></nav></header>
+<main class="page-main"><div class="wrap narrow">
+  <div class="page-title"><span class="eyebrow">Emergency Support</span><h1>Submit Emergency Blood Request</h1><p>Enter accurate details so the request can be reviewed and managed.</p></div>
+  <form class="form-card" id="requestForm">
+    <div class="form-grid">
+      <div class="field"><label for="patientName">Patient Name *</label><input id="patientName" name="patientName" placeholder="Full name" required maxlength="80"></div>
+      <div class="field"><label for="bloodGroup">Required Blood Group *</label><select id="bloodGroup" name="bloodGroup" required><option value="">Choose blood group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></div>
+      <div class="field"><label for="units">Units Required (bags) *</label><input id="units" name="units" type="number" min="1" max="20" placeholder="e.g. 2" required></div>
+      <div class="field"><label for="urgency">Urgency Level *</label><select id="urgency" name="urgency" required><option>Critical (Within 2 Hours)</option><option>Urgent (Within 6 Hours)</option><option>Normal (Within 24 Hours)</option></select></div>
+      <div class="field field-full"><label for="hospital">Hospital Name & Address *</label><input id="hospital" name="hospital" placeholder="Hospital name, street / area" required maxlength="180"></div>
+      <div class="field"><label for="city">City / Location *</label><input id="city" name="city" placeholder="e.g. Greater Noida" required maxlength="80"></div>
+      <div class="field"><label for="phone">Contact Phone Number *</label><input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit phone number" required></div>
+      <div class="field field-full"><label for="notes">Additional Details (optional)</label><textarea id="notes" name="notes" rows="3" placeholder="Any helpful information"></textarea></div>
+    </div>
+    <p class="form-note">Please do not use this demo form as a substitute for contacting a hospital or blood bank during an emergency.</p>
+    <button class="btn btn-primary btn-block" type="submit">Submit Emergency Request</button>
+    <div class="form-message" id="requestMessage" role="status"></div>
+  </form>
+</div></main><footer class="footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="index.html"><span class="drop">🩸</span><span><b>Blood</b>Connect</span></a><small>Academic prototype · Demo data stays in this browser</small></div></footer>
+</body></html>
